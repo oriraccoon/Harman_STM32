@@ -1,0 +1,30 @@
+#include <stdint.h>
+
+#define RCC_BASE_ADDR 0x40023800
+#define GPIOA_BASE_ADDR 0x40020000
+
+#define RCC_AHB1ENR 0x30
+#define GPIOA_PIN5 0x14
+
+int main(void)
+{
+    /*1. Enable clock access to GPIOA */
+	*(volatile uint32_t *) (RCC_BASE_ADDR + RCC_AHB1ENR) |= (1U << 0); // RCC_AHB1ENR
+	/*2. Set PA5 as output pin */
+	*(volatile uint32_t *) GPIOA_BASE_ADDR |= (1U << 10);     // GPIOA_MODER5 output mode
+	*(volatile uint32_t *) GPIOA_BASE_ADDR &= ~(1U << 11);    // GPIOA_MODER5 output mode
+
+	while(1)
+	{
+		int i = 0;
+		/*3. Set PA5 High */
+		*(volatile uint32_t *) GPIOA_BASE_ADDR + GPIOA_PIN5 |= (1U << 5);
+		/*4. Delay */
+		for (i = 0; i < 1000000; i++) {
+
+		}
+		/*5. Set PA5 Low */
+		*(volatile uint32_t *) GPIOA_BASE_ADDR + GPIOA_PIN5 &= ~(1U << 5);
+	}
+
+}

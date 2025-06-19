@@ -115,7 +115,7 @@ int main()
 
     return 0;
 }*/
-
+/*
 void swap(int*, int*);
 
 int main(){
@@ -138,4 +138,164 @@ void swap(int* pa, int* pb)
     *pa = *pb;
     *pb = temp;
 
+}
+*/
+/*
+int main()
+{
+    printf("apple이 저장된 시작 주소 값:%p\n", "apple");
+    printf("두 번째 문자의 주소 값:%p\n", "apple" + 1);
+    printf("첫 번째 문자:%c\n", *"apple");
+    printf("두 번째 문자:%s\n", &(*("apple"+1)));
+    printf("배열로 표현한 다섯 번째 문자:%c\n", "apple"[4] - 32);
+}*/
+/*
+int main()
+{
+    char *parr[8];
+
+    parr[0] = "dog";
+    parr[1] = "dog";
+    parr[2] = "dog";
+    parr[3] = "dog";
+    parr[4] = "dog";
+    parr[5] = "dog";
+    parr[6] = "dog";
+
+    for (int i = 0; i < 7; i++)
+    {
+        printf("%s\n", parr[i]);
+    }
+
+        printf("%d + %d = %d", a, b, func(sum(a, b)));
+    return 0;
+}
+*/
+/*
+void func(int (*pvf)(int,int), int, int, int);
+int sum(int, int);
+int sub(int, int);
+int mul(int, int);
+int div(int, int);
+
+int main()
+{
+    int (*pf)(int,int);
+    int sel = 0;
+    int a = 0, b = 0;
+
+    while(1)
+    {
+        printf("원하는 연산을 입력하세요.(0 : +, 1 : -, 2 : *, 3 : /, 7 : 종료):");
+        scanf("%d", &sel);
+        printf("두 정수를 입력하세요:");
+        scanf("%d %d", &a, &b);
+
+        switch(sel)
+        {
+            case 0:
+                func(sum, sel, a, b);
+                break;
+            case 1:
+                func(sub, sel, a, b);
+                break;
+            case 2:
+                func(mul, sel, a, b);
+                break;
+            case 3:
+                func(div, sel, a, b);
+                break;
+        }
+        if(sel == 7)
+        {
+            func(sum, sel, 0, 0);
+            break;
+        }
+    }
+
+    return 0;
+}
+
+int sum(int a, int b)
+{
+    return a+b;
+}
+
+int sub(int a, int b)
+{
+    return a-b;
+}
+int mul(int a, int b)
+{
+    return a * b;
+}
+int div(int a, int b)
+{
+    return a / b;
+}
+void func(int (*pvf)(int a, int b), int sel, int a, int b)
+{
+    switch (sel)
+    {
+    case 0:
+    case 1:
+    case 2:
+    case 3:
+        printf("a = %d, b = %d result = %d\n", a, b, pvf(a, b));
+        break;
+    case 7:
+        printf("종료합니다.");
+        break;
+    default:
+        break;
+    } 
+}
+*/
+/*
+struct Student
+{
+    int num;
+    double grade;
+};
+
+int main()
+{
+    struct Student student;
+
+    student.num = 2;
+    student.grade = 2.5;
+    printf("학년 : %d, 점수 : %.1lf", student.num, student.grade);
+
+    return 0;
+}*/
+
+enum {F, C, B, A};
+
+struct Profile
+{
+    int id;
+    char name[8];
+    int korean;
+    int english;
+    int math;
+};
+typedef struct Profile PF;
+
+struct Student
+{
+    PF profile;
+    double avg;
+    char grade;
+};
+typedef struct Student ST;
+
+int main()
+{
+    PF list[5] = {
+        {315, "홍길동", 80, 75, 90},
+        {316, "이순신", 80, 75, 90},
+        {317, "서하윤", 80, 75, 90},
+        {318, "유관순", 80, 75, 90},
+        {319, "박신혜", 80, 75, 90},
+    };
 }

@@ -1,0 +1,75 @@
+#include <stdint.h>
+
+#define PERIPH_BASE_ADDR  	(0x40000000UL)
+#define APB1PERIPH_OFFSET 	(0x00000UL)
+#define APB2PERIPH_OFFSET 	(0x10000UL)
+#define AHB1PERIPH_OFFSET 	(0x20000UL)
+#define AHB2PERIPH_OFFSET 	(0x30000UL)
+
+#define APB1PERIPH_BASE 	(PERIPH_BASE_ADDR + APB1PERIPH_OFFSET)
+#define APB2PERIPH_BASE 	(PERIPH_BASE_ADDR + APB2PERIPH_OFFSET)
+#define AHB1PERIPH_BASE 	(PERIPH_BASE_ADDR + AHB1PERIPH_OFFSET)
+#define AHB2PERIPH_BASE 	(PERIPH_BASE_ADDR + AHB2PERIPH_OFFSET)
+
+#define GPIOA_OFFSET 		(0x0000UL)
+#define GPIOB_OFFSET 		(0x0400UL)
+#define GPIOC_OFFSET 		(0x0800UL)
+#define GPIOD_OFFSET 		(0x0C00UL)
+#define GPIOE_OFFSET 		(0x1000UL)
+#define GPIOH_OFFSET 		(0x1C00UL)
+#define CRC_OFFSET   		(0x3000UL)
+#define RCC_OFFSET   		(0x3800UL)
+
+#define GPIOA_BASE 			(AHB1PERIPH_BASE + GPIOA_OFFSET)
+#define GPIOB_BASE 			(AHB1PERIPH_BASE + GPIOB_OFFSET)
+#define GPIOC_BASE 			(AHB1PERIPH_BASE + GPIOC_OFFSET)
+#define GPIOD_BASE 			(AHB1PERIPH_BASE + GPIOD_OFFSET)
+#define GPIOE_BASE 			(AHB1PERIPH_BASE + GPIOE_OFFSET)
+#define GPIOH_BASE 			(AHB1PERIPH_BASE + GPIOH_OFFSET)
+#define RCC_BASE   			(AHB1PERIPH_BASE + RCC_OFFSET)
+
+typedef struct
+{
+	volatile uint32_t MODER;
+	volatile uint32_t OTYPE;
+	volatile uint32_t OSPEEDR;
+	volatile uint32_t PUPDR;
+	volatile uint32_t IDR;
+	volatile uint32_t ODR;
+	volatile uint32_t BSRR;
+	volatile uint32_t LCKR;
+	volatile uint32_t AFR[2];
+} GPIO_TypeDef;
+
+#define GPIOA				((GPIO_TypeDef *)(GPIOA_BASE));
+#define GPIOB				((GPIO_TypeDef *)(GPIOB_BASE));
+#define GPIOC				((GPIO_TypeDef *)(GPIOC_BASE));
+#define GPIOD				((GPIO_TypeDef *)(GPIOD_BASE));
+#define GPIOE				((GPIO_TypeDef *)(GPIOE_BASE));
+#define GPIOH				((GPIO_TypeDef *)(GPIOH_BASE));
+
+int main(void)
+{
+	/*1. Enable clock access to GPIOA */
+	RCC_BASE |= (1U << 0); // RCC_AHB1ENR
+	/*2. Set PA5 as output pin */
+	GPIOA->MODER |= (1U << 10);     // GPIOA_MODER5 output mode
+	GPIOA->MODER &= ~(1U << 11);    // GPIOA_MODER5 output mode
+
+	while(1)
+	{
+		int i = 0;
+		/*3. Set PA5 High */
+		GPIOA_ODR5 |= (1U << 5);
+		/*4. Delay */
+		for (i = 0; i < 300000; i++) {
+
+		}
+		/*5. Set PA5 Low */
+		GPIOA_ODR5 &= ~(1U << 5);
+		/*6. Delay */
+		for (i = 0; i < 300000; i++) {
+
+		}
+	}
+}

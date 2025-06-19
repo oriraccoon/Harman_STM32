@@ -1,0 +1,54 @@
+#include "stm32f411xe.h"
+#include <stdint.h>
+#include "GPIO.h"
+
+int main(void)
+{
+	/*1. Enable clock access to GPIOA */
+	RCC->AHB1ENR |= (0X01U << 0); // RCC_AHB1ENR
+	RCC->AHB1ENR |= (0X02U << 0); // RCC_AHB1ENR
+	RCC->AHB1ENR |= (0X04U << 0); // RCC_AHB1ENR
+	/*2. Set PA5 as output pin */
+//	GPIOA->MODER |= (1U << 10);     // GPIOA_MODER5 output mode
+//	GPIOA->MODER &= ~(1U << 11);    // GPIOA_MODER5 output mode
+//	GPIO_Init(GPIOA, 5, OUTPUT);
+	GPIO_Init(GPIOA, 6, OUTPUT);
+	GPIO_Init(GPIOA, 0, OUTPUT);
+	GPIO_Init(GPIOA, 1, OUTPUT);
+	GPIO_Init(GPIOA, 4, OUTPUT);
+	GPIO_Init(GPIOB, 0, OUTPUT);
+	GPIO_Init(GPIOC, 0, OUTPUT);
+	GPIO_Init(GPIOC, 1, OUTPUT);
+
+	while(1)
+	{
+		int i = 0;
+		/*3. Set PA5 High */
+//		GPIOA->ODR |= (1U << 5);
+		GPIO_TogglePin(GPIOA, 5);
+		GPIO_TogglePin(GPIOA, 6);
+		GPIO_TogglePin(GPIOA, 0);
+		GPIO_TogglePin(GPIOA, 1);
+		GPIO_TogglePin(GPIOA, 4);
+		GPIO_TogglePin(GPIOB, 0);
+		GPIO_TogglePin(GPIOC, 0);
+		GPIO_TogglePin(GPIOC, 1);
+		/*4. Delay */
+		for (i = 0; i < 300000; i++) {
+
+		}
+		/*5. Set PA5 Low */
+		GPIO_TogglePin(GPIOA, 5);
+		GPIO_TogglePin(GPIOA, 6);
+		GPIO_TogglePin(GPIOA, 0);
+		GPIO_TogglePin(GPIOA, 1);
+		GPIO_TogglePin(GPIOA, 4);
+		GPIO_TogglePin(GPIOB, 0);
+		GPIO_TogglePin(GPIOC, 0);
+		GPIO_TogglePin(GPIOC, 1);
+		/*6. Delay */
+		for (i = 0; i < 300000; i++) {
+
+		}
+	}
+}

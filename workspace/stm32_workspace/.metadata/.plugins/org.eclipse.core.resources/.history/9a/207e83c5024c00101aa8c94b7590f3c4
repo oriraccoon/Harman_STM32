@@ -1,0 +1,16 @@
+#include "GPIO.h"
+
+void GPIO_init()
+{
+	
+}
+
+void GPIO_WritePin()
+{
+	
+}
+
+uint32_t GPIO_ReadPin()
+{
+	
+}

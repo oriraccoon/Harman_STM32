@@ -1,0 +1,45 @@
+#include "stm32f411xe.h"
+#include <stdint.h>
+#include "GPIO.h"
+#include "LEDBAR.h"
+
+#define RCC_AHB1ENR_GPIOAEN (0x01U)
+#define RCC_AHB1ENR_GPIOBEN (0x02U)
+#define RCC_AHB1ENR_GPIOCEN (0x04U)
+
+void Shift_LED(uint8_t sel);
+
+int main(void)
+{
+	/*1. Enable clock access to GPIOA */
+	RCC->AHB1ENR |= (RCC_AHB1ENR_GPIOAEN << 0); // RCC_AHB1ENR
+	RCC->AHB1ENR |= (RCC_AHB1ENR_GPIOBEN << 0); // RCC_AHB1ENR
+	RCC->AHB1ENR |= (RCC_AHB1ENR_GPIOCEN << 0); // RCC_AHB1ENR
+	/*2. Set PA5 as output pin */
+//	GPIOA->MODER |= (1U << 10);     // GPIOA_MODER5 output mode
+//	GPIOA->MODER &= ~(1U << 11);    // GPIOA_MODER5 output mode
+	GPIO_Init(GPIOA, 5, OUTPUT);
+	GPIO_Init(GPIOA, 6, OUTPUT);
+	GPIO_Init(GPIOA, 0, OUTPUT);
+	GPIO_Init(GPIOA, 1, OUTPUT);
+	GPIO_Init(GPIOA, 4, OUTPUT);
+	GPIO_Init(GPIOB, 0, OUTPUT);
+	GPIO_Init(GPIOC, 0, OUTPUT);
+	GPIO_Init(GPIOC, 1, OUTPUT);
+
+	uint8_t trig = 1;
+	int i;
+	while(1)
+	{
+		if (trig == 0x80) {
+			trig = 0x01;
+		}
+		else trig = (trig << 1);
+		LEDBAR_Write(trig);
+		for (i = 0; i < 100000; i++) {
+
+		}
+
+	}
+}
+

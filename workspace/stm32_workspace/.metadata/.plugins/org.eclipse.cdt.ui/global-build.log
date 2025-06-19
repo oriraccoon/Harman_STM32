@@ -1,0 +1,988 @@
+16:02:44 **** Incremental Build of configuration Debug for project 0618_GPIO_Baremetal ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/GPIO" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:5: warning: "RCC_AHB1ENR_GPIOAEN" redefined
+    5 | #define RCC_AHB1ENR_GPIOAEN (0x01U)
+      | 
+In file included from ../Src/main.c:1:
+../Inc/stm32f411xe.h:4283: note: this is the location of the previous definition
+ 4283 | #define RCC_AHB1ENR_GPIOAEN                RCC_AHB1ENR_GPIOAEN_Msk
+      | 
+../Src/main.c:6: warning: "RCC_AHB1ENR_GPIOBEN" redefined
+    6 | #define RCC_AHB1ENR_GPIOBEN (0x02U)
+      | 
+../Inc/stm32f411xe.h:4286: note: this is the location of the previous definition
+ 4286 | #define RCC_AHB1ENR_GPIOBEN                RCC_AHB1ENR_GPIOBEN_Msk
+      | 
+../Src/main.c:7: warning: "RCC_AHB1ENR_GPIOCEN" redefined
+    7 | #define RCC_AHB1ENR_GPIOCEN (0x04U)
+      | 
+../Inc/stm32f411xe.h:4289: note: this is the location of the previous definition
+ 4289 | #define RCC_AHB1ENR_GPIOCEN                RCC_AHB1ENR_GPIOCEN_Msk
+      | 
+arm-none-eabi-gcc -o "0618_GPIO_Baremetal.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\kccistc\Documents\GitHub\Harman_STM32\workspace\stm32_workspace\0618_GPIO_Baremetal\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="0618_GPIO_Baremetal.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 0618_GPIO_Baremetal.elf
+ 
+arm-none-eabi-size  0618_GPIO_Baremetal.elf 
+arm-none-eabi-objdump -h -S 0618_GPIO_Baremetal.elf  > "0618_GPIO_Baremetal.list"
+   text	   data	    bss	    dec	    hex	filename
+   1264	      0	   1568	   2832	    b10	0618_GPIO_Baremetal.elf
+Finished building: default.size.stdout
+ 
+Finished building: 0618_GPIO_Baremetal.list
+ 
+16:02:45 **** Incremental Build of configuration Debug for project 0618_GPIO_Baremetal ****
+make -j16 all 
+arm-none-eabi-size  0618_GPIO_Baremetal.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1264	      0	   1568	   2832	    b10	0618_GPIO_Baremetal.elf
+Finished building: default.size.stdout
+ 
+16:17:23 **** Incremental Build of configuration Debug for project 0618_GPIO_Baremetal ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/GPIO" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:5: warning: "RCC_AHB1ENR_GPIOAEN" redefined
+    5 | #define RCC_AHB1ENR_GPIOAEN (0x01U)
+      | 
+In file included from ../Src/main.c:1:
+../Inc/stm32f411xe.h:4283: note: this is the location of the previous definition
+ 4283 | #define RCC_AHB1ENR_GPIOAEN                RCC_AHB1ENR_GPIOAEN_Msk
+      | 
+../Src/main.c:6: warning: "RCC_AHB1ENR_GPIOBEN" redefined
+    6 | #define RCC_AHB1ENR_GPIOBEN (0x02U)
+      | 
+../Inc/stm32f411xe.h:4286: note: this is the location of the previous definition
+ 4286 | #define RCC_AHB1ENR_GPIOBEN                RCC_AHB1ENR_GPIOBEN_Msk
+      | 
+../Src/main.c:7: warning: "RCC_AHB1ENR_GPIOCEN" redefined
+    7 | #define RCC_AHB1ENR_GPIOCEN (0x04U)
+      | 
+../Inc/stm32f411xe.h:4289: note: this is the location of the previous definition
+ 4289 | #define RCC_AHB1ENR_GPIOCEN                RCC_AHB1ENR_GPIOCEN_Msk
+      | 
+arm-none-eabi-gcc -o "0618_GPIO_Baremetal.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\kccistc\Documents\GitHub\Harman_STM32\workspace\stm32_workspace\0618_GPIO_Baremetal\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="0618_GPIO_Baremetal.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 0618_GPIO_Baremetal.elf
+ 
+arm-none-eabi-size  0618_GPIO_Baremetal.elf 
+arm-none-eabi-objdump -h -S 0618_GPIO_Baremetal.elf  > "0618_GPIO_Baremetal.list"
+   text	   data	    bss	    dec	    hex	filename
+   1264	      0	   1568	   2832	    b10	0618_GPIO_Baremetal.elf
+Finished building: default.size.stdout
+ 
+Finished building: 0618_GPIO_Baremetal.list
+ 
+16:17:24 **** Incremental Build of configuration Debug for project 0618_LedBlink ****
+make -j16 all 
+arm-none-eabi-size  0618_LedBlink.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6004	     12	   1572	   7588	   1da4	0618_LedBlink.elf
+Finished building: default.size.stdout
+ 
+16:17:45 **** Incremental Build of configuration Debug for project 0618_GPIO_Baremetal ****
+make -j16 all 
+arm-none-eabi-size  0618_GPIO_Baremetal.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1264	      0	   1568	   2832	    b10	0618_GPIO_Baremetal.elf
+Finished building: default.size.stdout
+ 
+16:17:45 **** Incremental Build of configuration Debug for project 0618_LedBlink ****
+make -j16 all 
+arm-none-eabi-size  0618_LedBlink.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6004	     12	   1572	   7588	   1da4	0618_LedBlink.elf
+Finished building: default.size.stdout
+ 
+16:19:29 **** Incremental Build of configuration Debug for project 0618_GPIO_Baremetal ****
+make -j16 all 
+arm-none-eabi-size  0618_GPIO_Baremetal.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1264	      0	   1568	   2832	    b10	0618_GPIO_Baremetal.elf
+Finished building: default.size.stdout
+ 
+16:20:13 **** Incremental Build of configuration Debug for project 0618_GPIO_Baremetal ****
+make -j16 all 
+arm-none-eabi-size  0618_GPIO_Baremetal.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1264	      0	   1568	   2832	    b10	0618_GPIO_Baremetal.elf
+Finished building: default.size.stdout
+ 
+16:20:24 **** Incremental Build of configuration Debug for project 0618_GPIO_Baremetal ****
+make -j16 all 
+arm-none-eabi-size  0618_GPIO_Baremetal.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1264	      0	   1568	   2832	    b10	0618_GPIO_Baremetal.elf
+Finished building: default.size.stdout
+ 
+16:20:50 **** Incremental Build of configuration Debug for project 0618_GPIO_Baremetal ****
+make -j16 all 
+arm-none-eabi-size  0618_GPIO_Baremetal.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1264	      0	   1568	   2832	    b10	0618_GPIO_Baremetal.elf
+Finished building: default.size.stdout
+ 
+16:21:53 **** Incremental Build of configuration Debug for project 0618_GPIO_Baremetal ****
+make -j16 all 
+arm-none-eabi-size  0618_GPIO_Baremetal.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1264	      0	   1568	   2832	    b10	0618_GPIO_Baremetal.elf
+Finished building: default.size.stdout
+ 
+16:22:05 **** Incremental Build of configuration Debug for project 0618_GPIO_Baremetal ****
+make -j16 all 
+arm-none-eabi-size  0618_GPIO_Baremetal.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1264	      0	   1568	   2832	    b10	0618_GPIO_Baremetal.elf
+Finished building: default.size.stdout
+ 
+16:41:41 **** Incremental Build of configuration Debug for project 0618_GPIO_Baremetal ****
+make -j16 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/GPIO" -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/LEDBAR" -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f411retx.d" -MT"Startup/startup_stm32f411retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f411retx.o" "../Startup/startup_stm32f411retx.s"
+arm-none-eabi-gcc "../Src/Driver/LEDBAR/LEDBAR.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/GPIO" -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/LEDBAR" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/Driver/LEDBAR/LEDBAR.d" -MT"Src/Driver/LEDBAR/LEDBAR.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/Driver/LEDBAR/LEDBAR.o"
+arm-none-eabi-gcc "../Src/Driver/GPIO/GPIO.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/GPIO" -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/LEDBAR" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/Driver/GPIO/GPIO.d" -MT"Src/Driver/GPIO/GPIO.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/Driver/GPIO/GPIO.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/GPIO" -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/LEDBAR" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/GPIO" -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/LEDBAR" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/GPIO" -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/LEDBAR" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+In file included from C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/GPIO/GPIO.h:12,
+                 from ../Src/Driver/LEDBAR/LEDBAR.h:12,
+                 from ../Src/Driver/LEDBAR/LEDBAR.c:8:
+../Inc/stm32f411xe.h:782:29: warning: initialization of 'long unsigned int' from 'GPIO_TypeDef *' makes integer from pointer without a cast [-Wint-conversion]
+  782 | #define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:16:18: note: in expansion of macro 'GPIOA'
+   16 |                 {GPIOA, 5},
+      |                  ^~~~~
+../Inc/stm32f411xe.h:782:29: note: (near initialization for 'ledBar[0].GPIOx.MODER')
+  782 | #define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:16:18: note: in expansion of macro 'GPIOA'
+   16 |                 {GPIOA, 5},
+      |                  ^~~~~
+../Src/Driver/LEDBAR/LEDBAR.c:15:28: warning: missing braces around initializer [-Wmissing-braces]
+   15 | LEDBAR_TypeDef ledBar[8] = {
+      |                            ^
+../Inc/stm32f411xe.h:782:29: warning: initialization of 'long unsigned int' from 'GPIO_TypeDef *' makes integer from pointer without a cast [-Wint-conversion]
+  782 | #define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:17:18: note: in expansion of macro 'GPIOA'
+   17 |                 {GPIOA, 6},
+      |                  ^~~~~
+../Inc/stm32f411xe.h:782:29: note: (near initialization for 'ledBar[1].GPIOx.MODER')
+  782 | #define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:17:18: note: in expansion of macro 'GPIOA'
+   17 |                 {GPIOA, 6},
+      |                  ^~~~~
+../Src/Driver/LEDBAR/LEDBAR.c:15:28: warning: missing braces around initializer [-Wmissing-braces]
+   15 | LEDBAR_TypeDef ledBar[8] = {
+      |                            ^
+../Inc/stm32f411xe.h:782:29: warning: initialization of 'long unsigned int' from 'GPIO_TypeDef *' makes integer from pointer without a cast [-Wint-conversion]
+  782 | #define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:18:18: note: in expansion of macro 'GPIOA'
+   18 |                 {GPIOA, 1},
+      |                  ^~~~~
+../Inc/stm32f411xe.h:782:29: note: (near initialization for 'ledBar[2].GPIOx.MODER')
+  782 | #define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:18:18: note: in expansion of macro 'GPIOA'
+   18 |                 {GPIOA, 1},
+      |                  ^~~~~
+../Src/Driver/LEDBAR/LEDBAR.c:15:28: warning: missing braces around initializer [-Wmissing-braces]
+   15 | LEDBAR_TypeDef ledBar[8] = {
+      |                            ^
+../Inc/stm32f411xe.h:782:29: warning: initialization of 'long unsigned int' from 'GPIO_TypeDef *' makes integer from pointer without a cast [-Wint-conversion]
+  782 | #define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:19:18: note: in expansion of macro 'GPIOA'
+   19 |                 {GPIOA, 0},
+      |                  ^~~~~
+../Inc/stm32f411xe.h:782:29: note: (near initialization for 'ledBar[3].GPIOx.MODER')
+  782 | #define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:19:18: note: in expansion of macro 'GPIOA'
+   19 |                 {GPIOA, 0},
+      |                  ^~~~~
+../Src/Driver/LEDBAR/LEDBAR.c:15:28: warning: missing braces around initializer [-Wmissing-braces]
+   15 | LEDBAR_TypeDef ledBar[8] = {
+      |                            ^
+../Inc/stm32f411xe.h:782:29: warning: initialization of 'long unsigned int' from 'GPIO_TypeDef *' makes integer from pointer without a cast [-Wint-conversion]
+  782 | #define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:20:18: note: in expansion of macro 'GPIOA'
+   20 |                 {GPIOA, 4},
+      |                  ^~~~~
+../Inc/stm32f411xe.h:782:29: note: (near initialization for 'ledBar[4].GPIOx.MODER')
+  782 | #define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:20:18: note: in expansion of macro 'GPIOA'
+   20 |                 {GPIOA, 4},
+      |                  ^~~~~
+../Src/Driver/LEDBAR/LEDBAR.c:15:28: warning: missing braces around initializer [-Wmissing-braces]
+   15 | LEDBAR_TypeDef ledBar[8] = {
+      |                            ^
+../Inc/stm32f411xe.h:784:29: warning: initialization of 'long unsigned int' from 'GPIO_TypeDef *' makes integer from pointer without a cast [-Wint-conversion]
+  784 | #define GPIOC               ((GPIO_TypeDef *) GPIOC_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:21:18: note: in expansion of macro 'GPIOC'
+   21 |                 {GPIOC, 1},
+      |                  ^~~~~
+../Inc/stm32f411xe.h:784:29: note: (near initialization for 'ledBar[5].GPIOx.MODER')
+  784 | #define GPIOC               ((GPIO_TypeDef *) GPIOC_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:21:18: note: in expansion of macro 'GPIOC'
+   21 |                 {GPIOC, 1},
+      |                  ^~~~~
+../Src/Driver/LEDBAR/LEDBAR.c:15:28: warning: missing braces around initializer [-Wmissing-braces]
+   15 | LEDBAR_TypeDef ledBar[8] = {
+      |                            ^
+../Inc/stm32f411xe.h:784:29: warning: initialization of 'long unsigned int' from 'GPIO_TypeDef *' makes integer from pointer without a cast [-Wint-conversion]
+  784 | #define GPIOC               ((GPIO_TypeDef *) GPIOC_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:22:18: note: in expansion of macro 'GPIOC'
+   22 |                 {GPIOC, 0},
+      |                  ^~~~~
+../Src/main.c:6: warning: "RCC_AHB1ENR_GPIOAEN" redefined
+    6 | #define RCC_AHB1ENR_GPIOAEN (0x01U)
+      | 
+../Inc/stm32f411xe.h:784:29: note: (near initialization for 'ledBar[6].GPIOx.MODER')
+  784 | #define GPIOC               ((GPIO_TypeDef *) GPIOC_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:22:18: note: in expansion of macro 'GPIOC'
+   22 |                 {GPIOC, 0},
+      |                  ^~~~~
+../Src/Driver/LEDBAR/LEDBAR.c:15:28: warning: missing braces around initializer [-Wmissing-braces]
+   15 | LEDBAR_TypeDef ledBar[8] = {
+      |                            ^
+In file included from ../Src/main.c:1:
+../Inc/stm32f411xe.h:4283: note: this is the location of the previous definition
+ 4283 | #define RCC_AHB1ENR_GPIOAEN                RCC_AHB1ENR_GPIOAEN_Msk
+      | 
+../Src/main.c:7: warning: "RCC_AHB1ENR_GPIOBEN" redefined
+    7 | #define RCC_AHB1ENR_GPIOBEN (0x02U)
+      | 
+../Inc/stm32f411xe.h:4286: note: this is the location of the previous definition
+ 4286 | #define RCC_AHB1ENR_GPIOBEN                RCC_AHB1ENR_GPIOBEN_Msk
+      | 
+../Src/main.c:8: warning: "RCC_AHB1ENR_GPIOCEN" redefined
+    8 | #define RCC_AHB1ENR_GPIOCEN (0x04U)
+      | 
+../Inc/stm32f411xe.h:783:29: warning: initialization of 'long unsigned int' from 'GPIO_TypeDef *' makes integer from pointer without a cast [-Wint-conversion]
+  783 | #define GPIOB               ((GPIO_TypeDef *) GPIOB_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:23:18: note: in expansion of macro 'GPIOB'
+   23 |                 {GPIOB, 0}
+      |                  ^~~~~
+../Inc/stm32f411xe.h:4289: note: this is the location of the previous definition
+ 4289 | #define RCC_AHB1ENR_GPIOCEN                RCC_AHB1ENR_GPIOCEN_Msk
+      | 
+../Inc/stm32f411xe.h:783:29: note: (near initialization for 'ledBar[7].GPIOx.MODER')
+  783 | #define GPIOB               ((GPIO_TypeDef *) GPIOB_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:23:18: note: in expansion of macro 'GPIOB'
+   23 |                 {GPIOB, 0}
+      |                  ^~~~~
+../Src/Driver/LEDBAR/LEDBAR.c:15:28: warning: missing braces around initializer [-Wmissing-braces]
+   15 | LEDBAR_TypeDef ledBar[8] = {
+      |                            ^
+../Src/Driver/LEDBAR/LEDBAR.c:15:28: warning: missing braces around initializer [-Wmissing-braces]
+../Src/Driver/LEDBAR/LEDBAR.c: In function 'LEDBAR_Write':
+../Src/Driver/LEDBAR/LEDBAR.c:30:48: error: incompatible type for argument 1 of 'GPIO_WritePin'
+   30 |                         GPIO_WritePin(ledBar[i].GPIOx, ledBar[i].pinNum, PIN_SET);
+      |                                       ~~~~~~~~~^~~~~~
+      |                                                |
+      |                                                GPIO_TypeDef
+C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/GPIO/GPIO.h:18:34: note: expected 'GPIO_TypeDef *' but argument is of type 'GPIO_TypeDef'
+   18 | void GPIO_WritePin(GPIO_TypeDef *GPIOx, uint32_t pinNum, pin_state_t pinState);
+      |                    ~~~~~~~~~~~~~~^~~~~
+../Src/Driver/LEDBAR/LEDBAR.c:33:48: error: incompatible type for argument 1 of 'GPIO_WritePin'
+   33 |                         GPIO_WritePin(ledBar[i].GPIOx, ledBar[i].pinNum, PIN_RESET);
+      |                                       ~~~~~~~~~^~~~~~
+      |                                                |
+      |                                                GPIO_TypeDef
+C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/GPIO/GPIO.h:18:34: note: expected 'GPIO_TypeDef *' but argument is of type 'GPIO_TypeDef'
+   18 | void GPIO_WritePin(GPIO_TypeDef *GPIOx, uint32_t pinNum, pin_state_t pinState);
+      |                    ~~~~~~~~~~~~~~^~~~~
+make: *** [Src/Driver/LEDBAR/subdir.mk:19: Src/Driver/LEDBAR/LEDBAR.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+16:41:41 **** Incremental Build of configuration Debug for project 0618_LedBlink ****
+make -j16 all 
+arm-none-eabi-size  0618_LedBlink.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6004	     12	   1572	   7588	   1da4	0618_LedBlink.elf
+Finished building: default.size.stdout
+ 
+16:42:47 **** Incremental Build of configuration Debug for project 0618_GPIO_Baremetal ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/Driver/LEDBAR/LEDBAR.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/GPIO" -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/LEDBAR" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/Driver/LEDBAR/LEDBAR.d" -MT"Src/Driver/LEDBAR/LEDBAR.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/Driver/LEDBAR/LEDBAR.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/GPIO" -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/LEDBAR" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+In file included from C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/GPIO/GPIO.h:12,
+                 from ../Src/Driver/LEDBAR/LEDBAR.h:12,
+                 from ../Src/Driver/LEDBAR/LEDBAR.c:8:
+../Inc/stm32f411xe.h:782:29: warning: initialization of 'long unsigned int' from 'GPIO_TypeDef *' makes integer from pointer without a cast [-Wint-conversion]
+  782 | #define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:16:18: note: in expansion of macro 'GPIOA'
+   16 |                 {GPIOA, 5},
+      |                  ^~~~~
+../Inc/stm32f411xe.h:782:29: note: (near initialization for 'ledBar[0].GPIOx.MODER')
+  782 | #define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:16:18: note: in expansion of macro 'GPIOA'
+   16 |                 {GPIOA, 5},
+      |                  ^~~~~
+../Src/Driver/LEDBAR/LEDBAR.c:15:28: warning: missing braces around initializer [-Wmissing-braces]
+   15 | LEDBAR_TypeDef ledBar[8] = {
+      |                            ^
+../Inc/stm32f411xe.h:782:29: warning: initialization of 'long unsigned int' from 'GPIO_TypeDef *' makes integer from pointer without a cast [-Wint-conversion]
+  782 | #define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:17:18: note: in expansion of macro 'GPIOA'
+   17 |                 {GPIOA, 6},
+      |                  ^~~~~
+../Inc/stm32f411xe.h:782:29: note: (near initialization for 'ledBar[1].GPIOx.MODER')
+  782 | #define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:17:18: note: in expansion of macro 'GPIOA'
+   17 |                 {GPIOA, 6},
+      |                  ^~~~~
+../Src/Driver/LEDBAR/LEDBAR.c:15:28: warning: missing braces around initializer [-Wmissing-braces]
+   15 | LEDBAR_TypeDef ledBar[8] = {
+      |                            ^
+../Inc/stm32f411xe.h:782:29: warning: initialization of 'long unsigned int' from 'GPIO_TypeDef *' makes integer from pointer without a cast [-Wint-conversion]
+  782 | #define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:18:18: note: in expansion of macro 'GPIOA'
+   18 |                 {GPIOA, 1},
+      |                  ^~~~~
+../Inc/stm32f411xe.h:782:29: note: (near initialization for 'ledBar[2].GPIOx.MODER')
+  782 | #define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:18:18: note: in expansion of macro 'GPIOA'
+   18 |                 {GPIOA, 1},
+      |                  ^~~~~
+../Src/Driver/LEDBAR/LEDBAR.c:15:28: warning: missing braces around initializer [-Wmissing-braces]
+   15 | LEDBAR_TypeDef ledBar[8] = {
+      |                            ^
+../Inc/stm32f411xe.h:782:29: warning: initialization of 'long unsigned int' from 'GPIO_TypeDef *' makes integer from pointer without a cast [-Wint-conversion]
+  782 | #define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:19:18: note: in expansion of macro 'GPIOA'
+   19 |                 {GPIOA, 0},
+      |                  ^~~~~
+../Inc/stm32f411xe.h:782:29: note: (near initialization for 'ledBar[3].GPIOx.MODER')
+  782 | #define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:19:18: note: in expansion of macro 'GPIOA'
+   19 |                 {GPIOA, 0},
+      |                  ^~~~~
+../Src/main.c:6: warning: "RCC_AHB1ENR_GPIOAEN" redefined
+    6 | #define RCC_AHB1ENR_GPIOAEN (0x01U)
+      | 
+../Src/Driver/LEDBAR/LEDBAR.c:15:28: warning: missing braces around initializer [-Wmissing-braces]
+   15 | LEDBAR_TypeDef ledBar[8] = {
+      |                            ^
+../Inc/stm32f411xe.h:782:29: warning: initialization of 'long unsigned int' from 'GPIO_TypeDef *' makes integer from pointer without a cast [-Wint-conversion]
+  782 | #define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:20:18: note: in expansion of macro 'GPIOA'
+   20 |                 {GPIOA, 4},
+      |                  ^~~~~
+../Inc/stm32f411xe.h:782:29: note: (near initialization for 'ledBar[4].GPIOx.MODER')
+  782 | #define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:20:18: note: in expansion of macro 'GPIOA'
+   20 |                 {GPIOA, 4},
+      |                  ^~~~~
+In file included from ../Src/main.c:1:
+../Inc/stm32f411xe.h:4283: note: this is the location of the previous definition
+ 4283 | #define RCC_AHB1ENR_GPIOAEN                RCC_AHB1ENR_GPIOAEN_Msk
+      | 
+../Src/Driver/LEDBAR/LEDBAR.c:15:28: warning: missing braces around initializer [-Wmissing-braces]
+   15 | LEDBAR_TypeDef ledBar[8] = {
+      |                            ^
+../Inc/stm32f411xe.h:784:29: warning: initialization of 'long unsigned int' from 'GPIO_TypeDef *' makes integer from pointer without a cast [-Wint-conversion]
+  784 | #define GPIOC               ((GPIO_TypeDef *) GPIOC_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:21:18: note: in expansion of macro 'GPIOC'
+   21 |                 {GPIOC, 1},
+      |                  ^~~~~
+../Src/main.c:7: warning: "RCC_AHB1ENR_GPIOBEN" redefined
+    7 | #define RCC_AHB1ENR_GPIOBEN (0x02U)
+      | 
+../Inc/stm32f411xe.h:784:29: note: (near initialization for 'ledBar[5].GPIOx.MODER')
+  784 | #define GPIOC               ((GPIO_TypeDef *) GPIOC_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:21:18: note: in expansion of macro 'GPIOC'
+   21 |                 {GPIOC, 1},
+      |                  ^~~~~
+../Src/Driver/LEDBAR/LEDBAR.c:15:28: warning: missing braces around initializer [-Wmissing-braces]
+   15 | LEDBAR_TypeDef ledBar[8] = {
+      |                            ^
+../Inc/stm32f411xe.h:4286: note: this is the location of the previous definition
+ 4286 | #define RCC_AHB1ENR_GPIOBEN                RCC_AHB1ENR_GPIOBEN_Msk
+      | 
+../Inc/stm32f411xe.h:784:29: warning: initialization of 'long unsigned int' from 'GPIO_TypeDef *' makes integer from pointer without a cast [-Wint-conversion]
+  784 | #define GPIOC               ((GPIO_TypeDef *) GPIOC_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:22:18: note: in expansion of macro 'GPIOC'
+   22 |                 {GPIOC, 0},
+      |                  ^~~~~
+../Inc/stm32f411xe.h:784:29: note: (near initialization for 'ledBar[6].GPIOx.MODER')
+  784 | #define GPIOC               ((GPIO_TypeDef *) GPIOC_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:22:18: note: in expansion of macro 'GPIOC'
+   22 |                 {GPIOC, 0},
+      |                  ^~~~~
+../Src/Driver/LEDBAR/LEDBAR.c:15:28: warning: missing braces around initializer [-Wmissing-braces]
+   15 | LEDBAR_TypeDef ledBar[8] = {
+      |                            ^
+../Src/main.c:8: warning: "RCC_AHB1ENR_GPIOCEN" redefined
+    8 | #define RCC_AHB1ENR_GPIOCEN (0x04U)
+      | 
+../Inc/stm32f411xe.h:783:29: warning: initialization of 'long unsigned int' from 'GPIO_TypeDef *' makes integer from pointer without a cast [-Wint-conversion]
+  783 | #define GPIOB               ((GPIO_TypeDef *) GPIOB_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:23:18: note: in expansion of macro 'GPIOB'
+   23 |                 {GPIOB, 0}
+      |                  ^~~~~
+../Inc/stm32f411xe.h:4289: note: this is the location of the previous definition
+ 4289 | #define RCC_AHB1ENR_GPIOCEN                RCC_AHB1ENR_GPIOCEN_Msk
+      | 
+../Inc/stm32f411xe.h:783:29: note: (near initialization for 'ledBar[7].GPIOx.MODER')
+  783 | #define GPIOB               ((GPIO_TypeDef *) GPIOB_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:23:18: note: in expansion of macro 'GPIOB'
+   23 |                 {GPIOB, 0}
+      |                  ^~~~~
+../Src/Driver/LEDBAR/LEDBAR.c:15:28: warning: missing braces around initializer [-Wmissing-braces]
+   15 | LEDBAR_TypeDef ledBar[8] = {
+      |                            ^
+../Src/Driver/LEDBAR/LEDBAR.c:15:28: warning: missing braces around initializer [-Wmissing-braces]
+../Src/Driver/LEDBAR/LEDBAR.c: In function 'LEDBAR_Write':
+../Src/Driver/LEDBAR/LEDBAR.c:30:48: error: incompatible type for argument 1 of 'GPIO_WritePin'
+   30 |                         GPIO_WritePin(ledBar[i].GPIOx, ledBar[i].pinNum, PIN_SET);
+      |                                       ~~~~~~~~~^~~~~~
+      |                                                |
+      |                                                GPIO_TypeDef
+C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/GPIO/GPIO.h:18:34: note: expected 'GPIO_TypeDef *' but argument is of type 'GPIO_TypeDef'
+   18 | void GPIO_WritePin(GPIO_TypeDef *GPIOx, uint32_t pinNum, pin_state_t pinState);
+      |                    ~~~~~~~~~~~~~~^~~~~
+../Src/Driver/LEDBAR/LEDBAR.c:33:48: error: incompatible type for argument 1 of 'GPIO_WritePin'
+   33 |                         GPIO_WritePin(ledBar[i].GPIOx, ledBar[i].pinNum, PIN_RESET);
+      |                                       ~~~~~~~~~^~~~~~
+      |                                                |
+      |                                                GPIO_TypeDef
+C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/GPIO/GPIO.h:18:34: note: expected 'GPIO_TypeDef *' but argument is of type 'GPIO_TypeDef'
+   18 | void GPIO_WritePin(GPIO_TypeDef *GPIOx, uint32_t pinNum, pin_state_t pinState);
+      |                    ~~~~~~~~~~~~~~^~~~~
+make: *** [Src/Driver/LEDBAR/subdir.mk:19: Src/Driver/LEDBAR/LEDBAR.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+16:42:48 **** Incremental Build of configuration Debug for project 0618_LedBlink ****
+make -j16 all 
+arm-none-eabi-size  0618_LedBlink.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6004	     12	   1572	   7588	   1da4	0618_LedBlink.elf
+Finished building: default.size.stdout
+ 
+16:43:37 **** Incremental Build of configuration Debug for project 0618_GPIO_Baremetal ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/Driver/LEDBAR/LEDBAR.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/GPIO" -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/LEDBAR" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/Driver/LEDBAR/LEDBAR.d" -MT"Src/Driver/LEDBAR/LEDBAR.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/Driver/LEDBAR/LEDBAR.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/GPIO" -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/LEDBAR" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+In file included from C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/GPIO/GPIO.h:12,
+                 from ../Src/Driver/LEDBAR/LEDBAR.h:12,
+                 from ../Src/Driver/LEDBAR/LEDBAR.c:8:
+../Inc/stm32f411xe.h:782:29: warning: initialization of 'long unsigned int' from 'GPIO_TypeDef *' makes integer from pointer without a cast [-Wint-conversion]
+  782 | #define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:16:18: note: in expansion of macro 'GPIOA'
+   16 |                 {GPIOA, 5},
+      |                  ^~~~~
+../Inc/stm32f411xe.h:782:29: note: (near initialization for 'ledBar[0].GPIOx.MODER')
+  782 | #define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:16:18: note: in expansion of macro 'GPIOA'
+   16 |                 {GPIOA, 5},
+      |                  ^~~~~
+../Src/Driver/LEDBAR/LEDBAR.c:15:28: warning: missing braces around initializer [-Wmissing-braces]
+   15 | LEDBAR_TypeDef ledBar[8] = {
+      |                            ^
+../Inc/stm32f411xe.h:782:29: warning: initialization of 'long unsigned int' from 'GPIO_TypeDef *' makes integer from pointer without a cast [-Wint-conversion]
+  782 | #define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:17:18: note: in expansion of macro 'GPIOA'
+   17 |                 {GPIOA, 6},
+      |                  ^~~~~
+../Inc/stm32f411xe.h:782:29: note: (near initialization for 'ledBar[1].GPIOx.MODER')
+  782 | #define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:17:18: note: in expansion of macro 'GPIOA'
+   17 |                 {GPIOA, 6},
+      |                  ^~~~~
+../Src/Driver/LEDBAR/LEDBAR.c:15:28: warning: missing braces around initializer [-Wmissing-braces]
+   15 | LEDBAR_TypeDef ledBar[8] = {
+      |                            ^
+../Inc/stm32f411xe.h:782:29: warning: initialization of 'long unsigned int' from 'GPIO_TypeDef *' makes integer from pointer without a cast [-Wint-conversion]
+  782 | #define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:18:18: note: in expansion of macro 'GPIOA'
+   18 |                 {GPIOA, 1},
+      |                  ^~~~~
+../Inc/stm32f411xe.h:782:29: note: (near initialization for 'ledBar[2].GPIOx.MODER')
+  782 | #define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:18:18: note: in expansion of macro 'GPIOA'
+   18 |                 {GPIOA, 1},
+      |                  ^~~~~
+../Src/Driver/LEDBAR/LEDBAR.c:15:28: warning: missing braces around initializer [-Wmissing-braces]
+   15 | LEDBAR_TypeDef ledBar[8] = {
+      |                            ^
+../Inc/stm32f411xe.h:782:29: warning: initialization of 'long unsigned int' from 'GPIO_TypeDef *' makes integer from pointer without a cast [-Wint-conversion]
+  782 | #define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:19:18: note: in expansion of macro 'GPIOA'
+   19 |                 {GPIOA, 0},
+      |                  ^~~~~
+../Inc/stm32f411xe.h:782:29: note: (near initialization for 'ledBar[3].GPIOx.MODER')
+  782 | #define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:19:18: note: in expansion of macro 'GPIOA'
+   19 |                 {GPIOA, 0},
+      |                  ^~~~~
+../Src/Driver/LEDBAR/LEDBAR.c:15:28: warning: missing braces around initializer [-Wmissing-braces]
+   15 | LEDBAR_TypeDef ledBar[8] = {
+      |                            ^
+../Inc/stm32f411xe.h:782:29: warning: initialization of 'long unsigned int' from 'GPIO_TypeDef *' makes integer from pointer without a cast [-Wint-conversion]
+  782 | #define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:20:18: note: in expansion of macro 'GPIOA'
+   20 |                 {GPIOA, 4},
+      |                  ^~~~~
+../Inc/stm32f411xe.h:782:29: note: (near initialization for 'ledBar[4].GPIOx.MODER')
+  782 | #define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:20:18: note: in expansion of macro 'GPIOA'
+   20 |                 {GPIOA, 4},
+      |                  ^~~~~
+../Src/Driver/LEDBAR/LEDBAR.c:15:28: warning: missing braces around initializer [-Wmissing-braces]
+   15 | LEDBAR_TypeDef ledBar[8] = {
+      |                            ^
+../Inc/stm32f411xe.h:784:29: warning: initialization of 'long unsigned int' from 'GPIO_TypeDef *' makes integer from pointer without a cast [-Wint-conversion]
+  784 | #define GPIOC               ((GPIO_TypeDef *) GPIOC_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:21:18: note: in expansion of macro 'GPIOC'
+   21 |                 {GPIOC, 1},
+      |                  ^~~~~
+../Inc/stm32f411xe.h:784:29: note: (near initialization for 'ledBar[5].GPIOx.MODER')
+  784 | #define GPIOC               ((GPIO_TypeDef *) GPIOC_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:21:18: note: in expansion of macro 'GPIOC'
+   21 |                 {GPIOC, 1},
+      |                  ^~~~~
+../Src/Driver/LEDBAR/LEDBAR.c:15:28: warning: missing braces around initializer [-Wmissing-braces]
+   15 | LEDBAR_TypeDef ledBar[8] = {
+      |                            ^
+../Inc/stm32f411xe.h:784:29: warning: initialization of 'long unsigned int' from 'GPIO_TypeDef *' makes integer from pointer without a cast [-Wint-conversion]
+  784 | #define GPIOC               ((GPIO_TypeDef *) GPIOC_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:22:18: note: in expansion of macro 'GPIOC'
+   22 |                 {GPIOC, 0},
+      |                  ^~~~~
+../Inc/stm32f411xe.h:784:29: note: (near initialization for 'ledBar[6].GPIOx.MODER')
+  784 | #define GPIOC               ((GPIO_TypeDef *) GPIOC_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:22:18: note: in expansion of macro 'GPIOC'
+   22 |                 {GPIOC, 0},
+      |                  ^~~~~
+../Src/Driver/LEDBAR/LEDBAR.c:15:28: warning: missing braces around initializer [-Wmissing-braces]
+   15 | LEDBAR_TypeDef ledBar[8] = {
+      |                            ^
+../Inc/stm32f411xe.h:783:29: warning: initialization of 'long unsigned int' from 'GPIO_TypeDef *' makes integer from pointer without a cast [-Wint-conversion]
+  783 | #define GPIOB               ((GPIO_TypeDef *) GPIOB_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:23:18: note: in expansion of macro 'GPIOB'
+   23 |                 {GPIOB, 0}
+      |                  ^~~~~
+../Inc/stm32f411xe.h:783:29: note: (near initialization for 'ledBar[7].GPIOx.MODER')
+  783 | #define GPIOB               ((GPIO_TypeDef *) GPIOB_BASE)
+      |                             ^
+../Src/Driver/LEDBAR/LEDBAR.c:23:18: note: in expansion of macro 'GPIOB'
+   23 |                 {GPIOB, 0}
+      |                  ^~~~~
+../Src/Driver/LEDBAR/LEDBAR.c:15:28: warning: missing braces around initializer [-Wmissing-braces]
+   15 | LEDBAR_TypeDef ledBar[8] = {
+      |                            ^
+../Src/Driver/LEDBAR/LEDBAR.c:15:28: warning: missing braces around initializer [-Wmissing-braces]
+../Src/Driver/LEDBAR/LEDBAR.c: In function 'LEDBAR_Write':
+../Src/Driver/LEDBAR/LEDBAR.c:30:48: error: incompatible type for argument 1 of 'GPIO_WritePin'
+   30 |                         GPIO_WritePin(ledBar[i].GPIOx, ledBar[i].pinNum, PIN_SET);
+      |                                       ~~~~~~~~~^~~~~~
+      |                                                |
+      |                                                GPIO_TypeDef
+C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/GPIO/GPIO.h:18:34: note: expected 'GPIO_TypeDef *' but argument is of type 'GPIO_TypeDef'
+   18 | void GPIO_WritePin(GPIO_TypeDef *GPIOx, uint32_t pinNum, pin_state_t pinState);
+      |                    ~~~~~~~~~~~~~~^~~~~
+../Src/Driver/LEDBAR/LEDBAR.c:33:48: error: incompatible type for argument 1 of 'GPIO_WritePin'
+   33 |                         GPIO_WritePin(ledBar[i].GPIOx, ledBar[i].pinNum, PIN_RESET);
+      |                                       ~~~~~~~~~^~~~~~
+      |                                                |
+      |                                                GPIO_TypeDef
+C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/GPIO/GPIO.h:18:34: note: expected 'GPIO_TypeDef *' but argument is of type 'GPIO_TypeDef'
+   18 | void GPIO_WritePin(GPIO_TypeDef *GPIOx, uint32_t pinNum, pin_state_t pinState);
+      |                    ~~~~~~~~~~~~~~^~~~~
+make: *** [Src/Driver/LEDBAR/subdir.mk:19: Src/Driver/LEDBAR/LEDBAR.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+16:43:38 **** Incremental Build of configuration Debug for project 0618_LedBlink ****
+make -j16 all 
+arm-none-eabi-size  0618_LedBlink.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6004	     12	   1572	   7588	   1da4	0618_LedBlink.elf
+Finished building: default.size.stdout
+ 
+16:44:11 **** Incremental Build of configuration Debug for project 0618_GPIO_Baremetal ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/Driver/LEDBAR/LEDBAR.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/GPIO" -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/LEDBAR" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/Driver/LEDBAR/LEDBAR.d" -MT"Src/Driver/LEDBAR/LEDBAR.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/Driver/LEDBAR/LEDBAR.o"
+arm-none-eabi-gcc -o "0618_GPIO_Baremetal.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\kccistc\Documents\GitHub\Harman_STM32\workspace\stm32_workspace\0618_GPIO_Baremetal\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="0618_GPIO_Baremetal.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 0618_GPIO_Baremetal.elf
+ 
+arm-none-eabi-size  0618_GPIO_Baremetal.elf 
+arm-none-eabi-objdump -h -S 0618_GPIO_Baremetal.elf  > "0618_GPIO_Baremetal.list"
+   text	   data	    bss	    dec	    hex	filename
+   1140	     64	   1568	   2772	    ad4	0618_GPIO_Baremetal.elf
+Finished building: default.size.stdout
+ 
+Finished building: 0618_GPIO_Baremetal.list
+ 
+16:44:11 **** Incremental Build of configuration Debug for project 0618_LedBlink ****
+make -j16 all 
+arm-none-eabi-size  0618_LedBlink.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6004	     12	   1572	   7588	   1da4	0618_LedBlink.elf
+Finished building: default.size.stdout
+ 
+16:44:15 **** Incremental Build of configuration Debug for project 0618_GPIO_Baremetal ****
+make -j16 all 
+arm-none-eabi-size  0618_GPIO_Baremetal.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1140	     64	   1568	   2772	    ad4	0618_GPIO_Baremetal.elf
+Finished building: default.size.stdout
+ 
+16:45:43 **** Incremental Build of configuration Debug for project 0618_GPIO_Baremetal ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/Driver/LEDBAR/LEDBAR.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/GPIO" -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/LEDBAR" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/Driver/LEDBAR/LEDBAR.d" -MT"Src/Driver/LEDBAR/LEDBAR.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/Driver/LEDBAR/LEDBAR.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/GPIO" -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/LEDBAR" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "0618_GPIO_Baremetal.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\kccistc\Documents\GitHub\Harman_STM32\workspace\stm32_workspace\0618_GPIO_Baremetal\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="0618_GPIO_Baremetal.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 0618_GPIO_Baremetal.elf
+ 
+arm-none-eabi-size  0618_GPIO_Baremetal.elf 
+arm-none-eabi-objdump -h -S 0618_GPIO_Baremetal.elf  > "0618_GPIO_Baremetal.list"
+   text	   data	    bss	    dec	    hex	filename
+   1140	     64	   1568	   2772	    ad4	0618_GPIO_Baremetal.elf
+Finished building: default.size.stdout
+ 
+Finished building: 0618_GPIO_Baremetal.list
+ 
+16:45:44 **** Incremental Build of configuration Debug for project 0618_LedBlink ****
+make -j16 all 
+arm-none-eabi-size  0618_LedBlink.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6004	     12	   1572	   7588	   1da4	0618_LedBlink.elf
+Finished building: default.size.stdout
+ 
+16:45:46 **** Incremental Build of configuration Debug for project 0618_GPIO_Baremetal ****
+make -j16 all 
+arm-none-eabi-size  0618_GPIO_Baremetal.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1140	     64	   1568	   2772	    ad4	0618_GPIO_Baremetal.elf
+Finished building: default.size.stdout
+ 
+16:47:03 **** Incremental Build of configuration Debug for project 0618_GPIO_Baremetal ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/GPIO" -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/LEDBAR" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:27:13: warning: unused variable 'i' [-Wunused-variable]
+   27 |         int i;
+      |             ^
+../Src/main.c: In function 'delay':
+../Src/main.c:45:14: error: 'i' undeclared (first use in this function)
+   45 |         for (i = 0; i < 100000; i++) {
+      |              ^
+../Src/main.c:45:14: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+16:47:03 **** Incremental Build of configuration Debug for project 0618_LedBlink ****
+make -j16 all 
+arm-none-eabi-size  0618_LedBlink.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6004	     12	   1572	   7588	   1da4	0618_LedBlink.elf
+Finished building: default.size.stdout
+ 
+16:47:15 **** Incremental Build of configuration Debug for project 0618_GPIO_Baremetal ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/GPIO" -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/LEDBAR" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "0618_GPIO_Baremetal.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\kccistc\Documents\GitHub\Harman_STM32\workspace\stm32_workspace\0618_GPIO_Baremetal\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="0618_GPIO_Baremetal.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 0618_GPIO_Baremetal.elf
+ 
+arm-none-eabi-size  0618_GPIO_Baremetal.elf 
+arm-none-eabi-objdump -h -S 0618_GPIO_Baremetal.elf  > "0618_GPIO_Baremetal.list"
+   text	   data	    bss	    dec	    hex	filename
+   1180	     64	   1568	   2812	    afc	0618_GPIO_Baremetal.elf
+Finished building: default.size.stdout
+ 
+Finished building: 0618_GPIO_Baremetal.list
+ 
+16:47:16 **** Incremental Build of configuration Debug for project 0618_LedBlink ****
+make -j16 all 
+arm-none-eabi-size  0618_LedBlink.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6004	     12	   1572	   7588	   1da4	0618_LedBlink.elf
+Finished building: default.size.stdout
+ 
+16:47:18 **** Incremental Build of configuration Debug for project 0618_GPIO_Baremetal ****
+make -j16 all 
+arm-none-eabi-size  0618_GPIO_Baremetal.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1180	     64	   1568	   2812	    afc	0618_GPIO_Baremetal.elf
+Finished building: default.size.stdout
+ 
+16:47:35 **** Incremental Build of configuration Debug for project 0618_GPIO_Baremetal ****
+make -j16 all 
+arm-none-eabi-size  0618_GPIO_Baremetal.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1180	     64	   1568	   2812	    afc	0618_GPIO_Baremetal.elf
+Finished building: default.size.stdout
+ 
+16:48:31 **** Incremental Build of configuration Debug for project 0618_GPIO_Baremetal ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/Driver/LEDBAR/LEDBAR.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/GPIO" -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/LEDBAR" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/Driver/LEDBAR/LEDBAR.d" -MT"Src/Driver/LEDBAR/LEDBAR.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/Driver/LEDBAR/LEDBAR.o"
+arm-none-eabi-gcc -o "0618_GPIO_Baremetal.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\kccistc\Documents\GitHub\Harman_STM32\workspace\stm32_workspace\0618_GPIO_Baremetal\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="0618_GPIO_Baremetal.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 0618_GPIO_Baremetal.elf
+ 
+arm-none-eabi-size  0618_GPIO_Baremetal.elf 
+arm-none-eabi-objdump -h -S 0618_GPIO_Baremetal.elf  > "0618_GPIO_Baremetal.list"
+   text	   data	    bss	    dec	    hex	filename
+   1180	     64	   1568	   2812	    afc	0618_GPIO_Baremetal.elf
+Finished building: default.size.stdout
+ 
+Finished building: 0618_GPIO_Baremetal.list
+ 
+16:48:32 **** Incremental Build of configuration Debug for project 0618_LedBlink ****
+make -j16 all 
+arm-none-eabi-size  0618_LedBlink.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6004	     12	   1572	   7588	   1da4	0618_LedBlink.elf
+Finished building: default.size.stdout
+ 
+16:48:33 **** Incremental Build of configuration Debug for project 0618_GPIO_Baremetal ****
+make -j16 all 
+arm-none-eabi-size  0618_GPIO_Baremetal.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1180	     64	   1568	   2812	    afc	0618_GPIO_Baremetal.elf
+Finished building: default.size.stdout
+ 
+16:49:10 **** Incremental Build of configuration Debug for project 0618_GPIO_Baremetal ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/GPIO" -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/LEDBAR" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "0618_GPIO_Baremetal.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\kccistc\Documents\GitHub\Harman_STM32\workspace\stm32_workspace\0618_GPIO_Baremetal\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="0618_GPIO_Baremetal.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 0618_GPIO_Baremetal.elf
+ 
+arm-none-eabi-size  0618_GPIO_Baremetal.elf 
+arm-none-eabi-objdump -h -S 0618_GPIO_Baremetal.elf  > "0618_GPIO_Baremetal.list"
+   text	   data	    bss	    dec	    hex	filename
+   1184	     64	   1568	   2816	    b00	0618_GPIO_Baremetal.elf
+Finished building: default.size.stdout
+ 
+Finished building: 0618_GPIO_Baremetal.list
+ 
+16:49:10 **** Incremental Build of configuration Debug for project 0618_LedBlink ****
+make -j16 all 
+arm-none-eabi-size  0618_LedBlink.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6004	     12	   1572	   7588	   1da4	0618_LedBlink.elf
+Finished building: default.size.stdout
+ 
+16:49:18 **** Incremental Build of configuration Debug for project 0618_GPIO_Baremetal ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/GPIO" -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/LEDBAR" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "0618_GPIO_Baremetal.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\kccistc\Documents\GitHub\Harman_STM32\workspace\stm32_workspace\0618_GPIO_Baremetal\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="0618_GPIO_Baremetal.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 0618_GPIO_Baremetal.elf
+ 
+arm-none-eabi-size  0618_GPIO_Baremetal.elf 
+arm-none-eabi-objdump -h -S 0618_GPIO_Baremetal.elf  > "0618_GPIO_Baremetal.list"
+   text	   data	    bss	    dec	    hex	filename
+   1120	     64	   1568	   2752	    ac0	0618_GPIO_Baremetal.elf
+Finished building: default.size.stdout
+ 
+Finished building: 0618_GPIO_Baremetal.list
+ 
+16:49:19 **** Incremental Build of configuration Debug for project 0618_LedBlink ****
+make -j16 all 
+arm-none-eabi-size  0618_LedBlink.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6004	     12	   1572	   7588	   1da4	0618_LedBlink.elf
+Finished building: default.size.stdout
+ 
+16:49:20 **** Incremental Build of configuration Debug for project 0618_GPIO_Baremetal ****
+make -j16 all 
+arm-none-eabi-size  0618_GPIO_Baremetal.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1120	     64	   1568	   2752	    ac0	0618_GPIO_Baremetal.elf
+Finished building: default.size.stdout
+ 
+16:49:40 **** Incremental Build of configuration Debug for project 0618_GPIO_Baremetal ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/GPIO" -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/LEDBAR" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "0618_GPIO_Baremetal.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\kccistc\Documents\GitHub\Harman_STM32\workspace\stm32_workspace\0618_GPIO_Baremetal\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="0618_GPIO_Baremetal.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 0618_GPIO_Baremetal.elf
+ 
+arm-none-eabi-size  0618_GPIO_Baremetal.elf 
+arm-none-eabi-objdump -h -S 0618_GPIO_Baremetal.elf  > "0618_GPIO_Baremetal.list"
+   text	   data	    bss	    dec	    hex	filename
+   1172	     64	   1568	   2804	    af4	0618_GPIO_Baremetal.elf
+Finished building: default.size.stdout
+ 
+Finished building: 0618_GPIO_Baremetal.list
+ 
+16:49:41 **** Incremental Build of configuration Debug for project 0618_LedBlink ****
+make -j16 all 
+arm-none-eabi-size  0618_LedBlink.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6004	     12	   1572	   7588	   1da4	0618_LedBlink.elf
+Finished building: default.size.stdout
+ 
+16:49:44 **** Incremental Build of configuration Debug for project 0618_GPIO_Baremetal ****
+make -j16 all 
+arm-none-eabi-size  0618_GPIO_Baremetal.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1172	     64	   1568	   2804	    af4	0618_GPIO_Baremetal.elf
+Finished building: default.size.stdout
+ 
+16:58:19 **** Incremental Build of configuration Debug for project 0618_GPIO_Baremetal ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/GPIO" -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/LEDBAR" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:46:17: error: too few arguments to function 'delay'
+   46 |                 delay();
+      |                 ^~~~~
+../Src/main.c:7:6: note: declared here
+    7 | void delay(uint32_t num);
+      |      ^~~~~
+../Src/main.c:47:17: error: too few arguments to function 'delay'
+   47 |                 delay();
+      |                 ^~~~~
+../Src/main.c:7:6: note: declared here
+    7 | void delay(uint32_t num);
+      |      ^~~~~
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+16:58:20 **** Incremental Build of configuration Debug for project 0618_LedBlink ****
+make -j16 all 
+arm-none-eabi-size  0618_LedBlink.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6004	     12	   1572	   7588	   1da4	0618_LedBlink.elf
+Finished building: default.size.stdout
+ 
+16:58:26 **** Incremental Build of configuration Debug for project 0618_GPIO_Baremetal ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/GPIO" -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/LEDBAR" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:46:17: error: too few arguments to function 'delay'
+   46 |                 delay();
+      |                 ^~~~~
+../Src/main.c:7:6: note: declared here
+    7 | void delay(uint32_t num);
+      |      ^~~~~
+../Src/main.c:47:17: error: too few arguments to function 'delay'
+   47 |                 delay();
+      |                 ^~~~~
+../Src/main.c:7:6: note: declared here
+    7 | void delay(uint32_t num);
+      |      ^~~~~
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+16:58:38 **** Incremental Build of configuration Debug for project 0618_GPIO_Baremetal ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/GPIO" -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/LEDBAR" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "0618_GPIO_Baremetal.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\kccistc\Documents\GitHub\Harman_STM32\workspace\stm32_workspace\0618_GPIO_Baremetal\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="0618_GPIO_Baremetal.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 0618_GPIO_Baremetal.elf
+ 
+arm-none-eabi-size  0618_GPIO_Baremetal.elf 
+arm-none-eabi-objdump -h -S 0618_GPIO_Baremetal.elf  > "0618_GPIO_Baremetal.list"
+   text	   data	    bss	    dec	    hex	filename
+   1312	     64	   1568	   2944	    b80	0618_GPIO_Baremetal.elf
+Finished building: default.size.stdout
+ 
+Finished building: 0618_GPIO_Baremetal.list
+ 
+16:58:38 **** Incremental Build of configuration Debug for project 0618_LedBlink ****
+make -j16 all 
+arm-none-eabi-size  0618_LedBlink.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6004	     12	   1572	   7588	   1da4	0618_LedBlink.elf
+Finished building: default.size.stdout
+ 
+16:58:41 **** Incremental Build of configuration Debug for project 0618_GPIO_Baremetal ****
+make -j16 all 
+arm-none-eabi-size  0618_GPIO_Baremetal.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1312	     64	   1568	   2944	    b80	0618_GPIO_Baremetal.elf
+Finished building: default.size.stdout
+ 
+16:59:08 **** Incremental Build of configuration Debug for project 0618_GPIO_Baremetal ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/GPIO" -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/LEDBAR" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "0618_GPIO_Baremetal.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\kccistc\Documents\GitHub\Harman_STM32\workspace\stm32_workspace\0618_GPIO_Baremetal\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="0618_GPIO_Baremetal.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 0618_GPIO_Baremetal.elf
+ 
+arm-none-eabi-size  0618_GPIO_Baremetal.elf 
+arm-none-eabi-objdump -h -S 0618_GPIO_Baremetal.elf  > "0618_GPIO_Baremetal.list"
+   text	   data	    bss	    dec	    hex	filename
+   1308	     64	   1568	   2940	    b7c	0618_GPIO_Baremetal.elf
+Finished building: default.size.stdout
+ 
+Finished building: 0618_GPIO_Baremetal.list
+ 
+16:59:08 **** Incremental Build of configuration Debug for project 0618_LedBlink ****
+make -j16 all 
+arm-none-eabi-size  0618_LedBlink.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6004	     12	   1572	   7588	   1da4	0618_LedBlink.elf
+Finished building: default.size.stdout
+ 
+16:59:10 **** Incremental Build of configuration Debug for project 0618_GPIO_Baremetal ****
+make -j16 all 
+arm-none-eabi-size  0618_GPIO_Baremetal.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1308	     64	   1568	   2940	    b7c	0618_GPIO_Baremetal.elf
+Finished building: default.size.stdout
+ 
+17:06:49 **** Incremental Build of configuration Debug for project 0618_GPIO_Baremetal ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/GPIO" -I"C:/Users/kccistc/Documents/GitHub/Harman_STM32/workspace/stm32_workspace/0618_GPIO_Baremetal/Src/Driver/LEDBAR" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "0618_GPIO_Baremetal.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\kccistc\Documents\GitHub\Harman_STM32\workspace\stm32_workspace\0618_GPIO_Baremetal\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="0618_GPIO_Baremetal.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 0618_GPIO_Baremetal.elf
+ 
+arm-none-eabi-size  0618_GPIO_Baremetal.elf 
+arm-none-eabi-objdump -h -S 0618_GPIO_Baremetal.elf  > "0618_GPIO_Baremetal.list"
+   text	   data	    bss	    dec	    hex	filename
+   1332	     64	   1568	   2964	    b94	0618_GPIO_Baremetal.elf
+Finished building: default.size.stdout
+ 
+Finished building: 0618_GPIO_Baremetal.list
+ 
+17:06:50 **** Incremental Build of configuration Debug for project 0618_LedBlink ****
+make -j16 all 
+arm-none-eabi-size  0618_LedBlink.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6004	     12	   1572	   7588	   1da4	0618_LedBlink.elf
+Finished building: default.size.stdout
+ 
+17:06:53 **** Incremental Build of configuration Debug for project 0618_GPIO_Baremetal ****
+make -j16 all 
+arm-none-eabi-size  0618_GPIO_Baremetal.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1332	     64	   1568	   2964	    b94	0618_GPIO_Baremetal.elf
+Finished building: default.size.stdout
+ 
