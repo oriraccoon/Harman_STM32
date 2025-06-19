@@ -1,0 +1,47 @@
+/*
+ * ap_main.c
+ *
+ *  Created on: Jun 19, 2025
+ *      Author: kccistc
+ */
+#include "ap_main.h"
+
+int ap_main(){
+	uint8_t data = 1;
+	int led_state[3];
+
+	while(1){
+		led_state = {
+				(Button_GetState(GPIOB, 5) == ACT_PUSHED),
+				(Button_GetState(GPIOB, 3) == ACT_PUSHED),
+				(Button_GetState(GPIOA, 10) == ACT_PUSHED)
+		};
+
+		};
+
+		switch(led_state)
+		{
+			case 0:
+				data = (data << 1) | (data >> 7);
+			break;
+
+			case 1:
+				data = (data >> 1) | (data << 7);
+			break;
+		}
+
+		LedBar_Write(data);
+		delay(100);
+	}
+
+	return 0;
+}
+
+void ap_init(){
+	SystemClock_Init();
+	LedBar_Init();
+	Button_Init(GPIOC, 13);
+	Button_Init(GPIOB, 5);
+	Button_Init(GPIOB, 3); // on/off
+	Button_Init(GPIOA, 10);
+}

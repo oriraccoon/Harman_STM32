@@ -877,12 +877,12 @@ LOAD C:/ST/STM32CubeIDE_1.18.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_line    0x00000995      0x593 ./Src/main.o
  .debug_line    0x00000f28       0x7b ./Startup/startup_stm32f411retx.o
 
-.debug_str      0x00000000    0x48850
- .debug_str     0x00000000    0x48850 ./Src/Driver/GPIO/GPIO.o
+.debug_str      0x00000000    0x4884f
+ .debug_str     0x00000000    0x4884f ./Src/Driver/GPIO/GPIO.o
                               0x487d9 (size before relaxing)
- .debug_str     0x00048850    0x487e1 ./Src/Driver/LEDBAR/LEDBAR.o
- .debug_str     0x00048850    0x488db ./Src/main.o
- .debug_str     0x00048850       0xa2 ./Startup/startup_stm32f411retx.o
+ .debug_str     0x0004884f    0x487e1 ./Src/Driver/LEDBAR/LEDBAR.o
+ .debug_str     0x0004884f    0x488da ./Src/main.o
+ .debug_str     0x0004884f       0xa2 ./Startup/startup_stm32f411retx.o
 
 .comment        0x00000000       0x43
  .comment       0x00000000       0x43 ./Src/Driver/GPIO/GPIO.o

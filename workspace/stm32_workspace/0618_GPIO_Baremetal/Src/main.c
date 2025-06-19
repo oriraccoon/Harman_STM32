@@ -26,19 +26,19 @@ int main(void)
 
 	uint8_t trig = 1;
 	uint8_t btn_trig = 0;
-	uint8_t btn_off = 0;
+	uint8_t btn_on = 0;
 	while(1)
 	{
 		uint32_t btn = GPIO_ReadPin(GPIOC, 13);
-		if (btn == 1 && btn_off == 1) {
+		if (btn == 1 && btn_on == 1) {
 			delay(1);
 			if (btn) {
 				btn_trig ^= 1;
 			}
 		}
 
-		if(btn == 0) btn_off = 1;
-		else btn_off = 0;
+		if(btn == 0) btn_on = 1;
+		else btn_on = 0;
 
 
 		if (btn_trig) {

@@ -1,0 +1,36 @@
+/*
+ * BTN.c
+ *
+ *  Created on: Jun 19, 2025
+ *      Author: kccistc
+ */
+
+#include "BTN.h"
+
+
+void BTN_Init()
+{
+	GPIO_Init(GPIOC, 13, INPUT);
+}
+
+button_state_t BTN_GetState()
+{
+	static uint32_t prevState = RELEASED;
+    uint32_t curState;
+    curState = GPIO_ReadPin(GPIOC, 13);
+
+    if ((prevState == RELEASED) && (curState == PUSHED))
+    {
+    	delay(3);
+    	prevState = PUSHED;
+    	return ACT_PUSHED;
+    }
+    else if ((prevState == PUSHED) && (curState == RELEASED))
+    {
+    	delay(3);
+    	prevState = RELEASED;
+    	return ACT_RELEASED;
+    }
+    else return NO_ACT;
+}
+

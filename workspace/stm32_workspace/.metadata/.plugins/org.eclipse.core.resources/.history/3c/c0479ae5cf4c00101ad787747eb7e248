@@ -1,0 +1,92 @@
+/*
+ * ap_main.c
+ *
+ *  Created on: Jun 19, 2025
+ *      Author: kccistc
+ */
+#include "ap_main.h"
+
+Button_Handler_t hBtnLeft;
+Button_Handler_t hBtnRight;
+Button_Handler_t hBtnOnOff;
+
+typedef enum{OFF, RIGHT, LEFT} led_state_t;
+/*
+void ap_main(){
+	uint8_t data = 1;
+	uint8_t right_state = 0;
+	uint8_t OnOff = 0;
+	uint8_t left_state = 0;
+
+	while(1){
+		if (Button_GetState(&hBtnRight) == ACT_PUSHED) right_state ^= 1;
+		if (Button_GetState(&hBtnOnOff) == ACT_PUSHED) OnOff ^= 1;
+		if (Button_GetState(&hBtnLeft) == ACT_PUSHED) left_state ^= 1;
+
+		if (!left_state && right_state && !OnOff)
+			data = (data << 1) | (data >> 7);
+		else if (left_state && !right_state && !OnOff)
+			data = (data >> 1) | (data << 7);
+		else
+			data = (data << 1) | (data >> 7);
+
+		LedBar_Write(data);
+
+		if (OnOff){
+			LedBar_Write(0x00);
+		}
+		delay(100);
+	}
+
+}*/
+
+void ap_main(){
+	led_state_t led_state = OFF;
+
+	while(1)
+	{
+		right_state = (Button_GetState(&hBtnRight) == ACT_PUSHED);
+		OnOff = (Button_GetState(&hBtnOnOff) == ACT_PUSHED);
+		left_state = (Button_GetState(&hBtnLeft) == ACT_PUSHED);
+
+		switch(led_state)
+		{
+		case OFF:
+			LedBar_Write(0x00);
+			if (rigth_state) {
+				led_state = RIGHT;
+			}
+			else if (left_state) {
+				led_state = LEFT;
+			}
+			break;
+		case RIGHT:
+			if (OnOff) {
+				led_state = OFF;
+			}
+			else if (left_state) {
+				led_state = LEFT;
+			}
+			LedBar_Write(data);
+			break;
+		case LEFT:
+			if (OnOff) {
+				led_state = OFF;
+			}
+			else if (right_state) {
+				led_state = RIGHT;
+			}
+			LedBar_Write(data);
+			break;
+		}
+		delay(100);
+	}
+}
+
+void ap_init(){
+	SystemClock_Init();
+	LedBar_Init();
+	Button_Init(&hBtnRight, GPIOB, 5);
+	Button_Init(&hBtnOnOff, GPIOB, 3); // on/off
+	Button_Init(&hBtnLeft, GPIOA, 10);
+}

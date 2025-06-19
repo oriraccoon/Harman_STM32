@@ -1,0 +1,252 @@
+/*
+ * ap_main.c
+ *
+ *  Created on: Jun 19, 2025
+ *      Author: kccistc
+ */
+#include "ap_main.h"
+
+Button_Handler_t hBtnClear;
+Button_Handler_t hBtnLeft;
+Button_Handler_t hBtnRight;
+Button_Handler_t hBtnOnOff;
+
+Handler_FND_TypeDef D1;
+Handler_FND_TypeDef D2;
+Handler_FND_TypeDef D3;
+Handler_FND_TypeDef D4;
+
+typedef enum{STOP, PLUS, MINUS, CLEAR} led_state_t;
+
+/*
+void ap_main(){
+	uint8_t data = 1;
+	uint8_t right_state = 0;
+	uint8_t OnOff = 0;
+	uint8_t left_state = 0;
+
+	while(1){
+		if (Button_GetState(&hBtnRight) == ACT_PUSHED) right_state ^= 1;
+		if (Button_GetState(&hBtnOnOff) == ACT_PUSHED) OnOff ^= 1;
+		if (Button_GetState(&hBtnLeft) == ACT_PUSHED) left_state ^= 1;
+
+		if (!left_state && right_state && !OnOff)
+			data = (data << 1) | (data >> 7);
+		else if (left_state && !right_state && !OnOff)
+			data = (data >> 1) | (data << 7);
+		else
+			data = (data << 1) | (data >> 7);
+
+		LedBar_Write(data);
+
+		if (OnOff){
+			LedBar_Write(0x00);
+		}
+		delay(100);
+	}
+}*/
+/*
+void ap_main(){
+	led_state_t led_state = OFF;
+	led_state_t prev_led_state = RIGHT;
+	uint8_t right_state = 0;
+	uint8_t OnOff = 0;
+	uint8_t left_state = 0;
+	uint8_t data = 1;
+
+	uint32_t fnd_data = 0;
+
+	while(1)
+	{
+		right_state = (Button_GetState(&hBtnRight) == ACT_PUSHED);
+		OnOff = (Button_GetState(&hBtnOnOff) == ACT_PUSHED);
+		left_state = (Button_GetState(&hBtnLeft) == ACT_PUSHED);
+
+		switch(led_state)
+		{
+		case OFF:
+			LedBar_Write(0x00);
+			FND_Write(fnd_data);
+			if (right_state) {
+				led_state = RIGHT;
+			}
+			else if (left_state) {
+				led_state = LEFT;
+			}
+			else if (OnOff) {
+				led_state = prev_led_state;
+			}
+			break;
+		case RIGHT:
+			data = (data << 1) | (data >> 7);
+			fnd_data++;
+			if (OnOff) {
+				prev_led_state = led_state;
+				led_state = OFF;
+			}
+			else if (left_state) {
+				led_state = LEFT;
+			}
+			LedBar_Write(data);
+			FND_Write(fnd_data);
+			break;
+		case LEFT:
+			data = (data >> 1) | (data << 7);
+			fnd_data--;
+			if (OnOff) {
+				prev_led_state = led_state;
+				led_state = OFF;
+			}
+			else if (right_state) {
+				led_state = RIGHT;
+			}
+			LedBar_Write(data);
+			break;
+		}
+
+
+		delay(100);
+	}
+}
+*/
+void ap_main()
+{
+
+	led_state_t fnd_data_state = STOP;
+	led_state_t prev_fnd_data_state = PLUS;
+	uint32_t fnd_data = 1234;
+	uint32_t fnd_state = 0x01;
+	uint32_t prev_fnd_state = 0x01;
+	uint8_t right_state = 0;
+	uint8_t OnOff = 0;
+	uint8_t left_state = 0;
+	uint8_t b_clear = 0;
+
+	uint32_t num_1, num_10, num_100, num_1000;
+
+	while(1){
+		if (fnd_data >= 10000) fnd_data = 0;
+		else if(fnd_data < 0) fnd_data = 9999;
+
+		num_1 = (fnd_data % 10);
+		num_10 = (fnd_data / 10) % 10;
+		num_100 = (fnd_data / 100) % 10;
+		num_1000 = (fnd_data / 1000);
+
+		switch(fnd_state)
+		{
+			case 0x01:
+				prev_fnd_state = fnd_state;
+				fnd_state = 0x02;
+				FND_Init(&D1, GPIOC, 8, PIN_RESET);
+				FND_Init(&D2, GPIOC, 6, PIN_SET);
+				FND_Init(&D3, GPIOC, 5, PIN_SET);
+				FND_Init(&D4, GPIOA, 12, PIN_SET);
+				FND_Write(num_1000);
+				delay(10);
+			case 0x02:
+				prev_fnd_state = fnd_state;
+				fnd_state = 0x04;
+				FND_Init(&D1, GPIOC, 8, PIN_SET);
+				FND_Init(&D2, GPIOC, 6, PIN_RESET);
+				FND_Init(&D3, GPIOC, 5, PIN_SET);
+				FND_Init(&D4, GPIOA, 12, PIN_SET);
+				FND_Write(num_100);
+				
+				delay(10);
+
+			case 0x04:
+				prev_fnd_state = fnd_state;
+				fnd_state = 0x08;
+				FND_Init(&D1, GPIOC, 8, PIN_SET);
+				FND_Init(&D2, GPIOC, 6, PIN_SET);
+				FND_Init(&D3, GPIOC, 5, PIN_RESET);
+				FND_Init(&D4, GPIOA, 12, PIN_SET);
+				FND_Write(num_10);
+				
+				delay(10);
+			case 0x08:
+				prev_fnd_state = fnd_state;
+				fnd_state = 0x01;
+				FND_Init(&D1, GPIOC, 8, PIN_SET);
+				FND_Init(&D2, GPIOC, 6, PIN_SET);
+				FND_Init(&D3, GPIOC, 5, PIN_SET);
+				FND_Init(&D4, GPIOA, 12, PIN_RESET);
+				FND_Write(num_1);
+		}
+
+		b_clear = (Button_GetState(&hBtnClear) == ACT_PUSHED);
+		right_state = (Button_GetState(&hBtnRight) == ACT_PUSHED);
+		OnOff = (Button_GetState(&hBtnOnOff) == ACT_PUSHED);
+		left_state = (Button_GetState(&hBtnLeft) == ACT_PUSHED);
+
+		switch(fnd_data_state)
+		{
+		case STOP:
+			if (right_state) {
+				fnd_data_state = PLUS;
+			}
+			else if (left_state) {
+				fnd_data_state = MINUS;
+			}
+			else if (b_clear) {
+				fnd_data_state = CLEAR;
+			}
+			else if (OnOff) {
+				fnd_data_state = prev_fnd_data_state;
+			}
+			break;
+		case PLUS:
+			fnd_data++;
+			if (OnOff) {
+				prev_fnd_data_state = fnd_data_state;
+				fnd_data_state = STOP;
+			}
+			else if (left_state) {
+				fnd_data_state = MINUS;
+			}
+			else if (b_clear) {
+				fnd_data_state = CLEAR;
+			}
+			break;
+		case MINUS:
+			fnd_data--;
+			if (OnOff) {
+				prev_fnd_data_state = fnd_data_state;
+				fnd_data_state = STOP;
+			}
+			else if (right_state) {
+				fnd_data_state = PLUS;
+			}
+			else if (b_clear) {
+				fnd_data_state = CLEAR;
+			}
+			break;
+		case CLEAR:
+			fnd_data = 0;
+			if (OnOff) {
+				prev_fnd_data_state = fnd_data_state;
+				fnd_data_state = STOP;
+			}
+			else if (right_state) {
+				fnd_data_state = PLUS;
+			}
+			else if (left_state) {
+				fnd_data_state = MINUS;
+			}
+			break;
+
+		}
+		delay(10);
+	}
+}
+
+void ap_init(){
+	SystemClock_Init();
+	LedBar_Init();
+	FND_DATA_Init();
+	Button_Init(&hBtnClear, GPIOC, 13);
+	Button_Init(&hBtnRight, GPIOB, 5);
+	Button_Init(&hBtnOnOff, GPIOB, 3); // on/off
+	Button_Init(&hBtnLeft, GPIOA, 10);
+}

@@ -1,0 +1,63 @@
+#include "stm32f411xe.h"
+#include <stdint.h>
+#include "GPIO.h"
+#include "LEDBAR.h"
+
+void Shift_LED(uint8_t sel);
+void delay(uint32_t num);
+int main(void)
+{
+	/*1. Enable clock access to GPIOA */
+	RCC->AHB1ENR |= (RCC_AHB1ENR_GPIOAEN << 0); // RCC_AHB1ENR
+	RCC->AHB1ENR |= (RCC_AHB1ENR_GPIOBEN << 0); // RCC_AHB1ENR
+	RCC->AHB1ENR |= (RCC_AHB1ENR_GPIOCEN << 0); // RCC_AHB1ENR
+	/*2. Set PA5 as output pin */
+//	GPIOA->MODER |= (1U << 10);     // GPIOA_MODER5 output mode
+//	GPIOA->MODER &= ~(1U << 11);    // GPIOA_MODER5 output mode
+	GPIO_Init(GPIOA, 5, OUTPUT);
+	GPIO_Init(GPIOA, 6, OUTPUT);
+	GPIO_Init(GPIOA, 0, OUTPUT);
+	GPIO_Init(GPIOA, 1, OUTPUT);
+	GPIO_Init(GPIOA, 4, OUTPUT);
+	GPIO_Init(GPIOB, 0, OUTPUT);
+	GPIO_Init(GPIOC, 0, OUTPUT);
+	GPIO_Init(GPIOC, 1, OUTPUT);
+	GPIO_Init(GPIOC, 13, INPUT);
+
+	uint8_t trig = 1;
+	uint8_t btn_trig = 0;
+	uint8_t btn_off = 0;
+	while(1)
+	{
+		uint32_t btn = GPIO_ReadPin(GPIOC, 13);
+		if (btn == 0 && btn_off == 1) {
+			delay(1);
+			if (btn) {
+				btn_trig ^= 1;
+			}
+		}
+
+		if(btn == 1) btn_off = 1;
+		else btn_off = 0;
+
+
+		if (btn_trig) {
+			trig = (trig << 1) | (trig >> 7);
+		}
+		else trig = (trig >> 1) | (trig << 7);
+
+		LEDBAR_Write(trig);
+		delay(100);
+		delay(100);
+
+	}
+}
+
+
+void delay(uint32_t num)
+{
+	for (int i = 0; i < (1000*num); i++) {
+
+	}
+
+}

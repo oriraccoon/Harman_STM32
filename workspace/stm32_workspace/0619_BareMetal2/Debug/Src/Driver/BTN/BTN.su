@@ -1,0 +1,2 @@
+../Src/Driver/BTN/BTN.c:12:6:BTN_Init	8	static
+../Src/Driver/BTN/BTN.c:17:16:BTN_GetState	16	static

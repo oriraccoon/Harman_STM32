@@ -1,0 +1,20 @@
+/*
+ * BTN.h
+ *
+ *  Created on: Jun 19, 2025
+ *      Author: kccistc
+ */
+
+#ifndef DRIVER_BTN_BTN_H_
+#define DRIVER_BTN_BTN_H_
+
+#include <stdint.h>
+#include "GPIO.h"
+
+enum {PUSHED=0, RELEASED};
+typedef enum {NO_ACT, ACT_PUSHED, ACT_RELEASED} button_state_t;
+
+void BTN_Init();
+button_state_t BTN_GetState();
+
+#endif /* DRIVER_BTN_BTN_H_ */

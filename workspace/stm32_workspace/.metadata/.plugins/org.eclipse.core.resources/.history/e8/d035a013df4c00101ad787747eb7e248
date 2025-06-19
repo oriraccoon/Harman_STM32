@@ -1,0 +1,22 @@
+/*
+ * FND.h
+ *
+ *  Created on: Jun 19, 2025
+ *      Author: kccistc
+ */
+
+#ifndef DRIVER_FND_FND_H_
+#define DRIVER_FND_FND_H_
+
+typedef struct
+{
+	GPIO_TypeDef *GPIOx;
+	uint32_t pinNum;
+	uint32_t data;
+}Handler_FND_TypeDef;
+
+#include <stdint.h>
+#include "SystemClock.h"
+#include "GPIO.h"
+
+#endif /* DRIVER_FND_FND_H_ */

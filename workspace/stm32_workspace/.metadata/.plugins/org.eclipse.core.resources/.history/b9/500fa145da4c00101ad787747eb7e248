@@ -1,0 +1,32 @@
+/*
+ * FND.c
+ *
+ *  Created on: Jun 19, 2025
+ *      Author: kccistc
+ */
+
+#include "FND.h"
+
+typedef struct
+{
+	GPIO_TypeDef *GPIOx;
+	uint32_t pinNum;
+	uint32_t data;
+}Handler_FND_TypeDef;
+
+
+void FND_Init(Handler_FND_TypeDef *hfnd, GPIO_TypeDef *GPIOx, uint32_t pinNum)
+{
+	hfnd->GPIOx = 0;
+	hfnd->pinNum = 0;
+	GPIO_init(hfnd->GPIOx, hfnd->pinNum, OUTPUT);
+
+	hfnd->GPIOx = GPIOx;
+	hfnd->pinNum = pinNum;
+	GPIO_init(hfnd->GPIOx, hfnd->pinNum, OUTPUT);
+}
+
+void FND_Write(Handler_FND_TypeDef *hfnd, uint32_t data)
+{
+
+}

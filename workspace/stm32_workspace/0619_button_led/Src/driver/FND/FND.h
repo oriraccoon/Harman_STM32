@@ -1,0 +1,26 @@
+/*
+ * FND.h
+ *
+ *  Created on: Jun 19, 2025
+ *      Author: kccistc
+ */
+
+#ifndef DRIVER_FND_FND_H_
+#define DRIVER_FND_FND_H_
+#include <stdint.h>
+#include "GPIO.h"
+#include "stm32f411xe.h"
+
+typedef struct
+{
+	GPIO_TypeDef *GPIOx;
+	uint32_t pinNum;
+	uint32_t data;
+}Handler_FND_TypeDef;
+
+
+void FND_Init(Handler_FND_TypeDef *hfnd, GPIO_TypeDef *GPIOx, uint32_t pinNum, pin_state_t pinState);
+void FND_DATA_Init();
+void FND_Write(uint32_t data);
+
+#endif /* DRIVER_FND_FND_H_ */

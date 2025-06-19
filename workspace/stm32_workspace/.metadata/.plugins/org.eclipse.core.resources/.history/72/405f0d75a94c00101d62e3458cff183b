@@ -1,0 +1,18 @@
+/*
+ * BTN.c
+ *
+ *  Created on: Jun 19, 2025
+ *      Author: kccistc
+ */
+
+#include "BTN.h"
+
+uint32_t BTN_Read()
+{
+    GPIO_ReadPin(GPIOC, 13);
+}
+
+void BTN_Init()
+{
+	GPIO_Init(GPIOC, 13, INPUT);
+}

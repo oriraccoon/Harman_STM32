@@ -1,0 +1,47 @@
+/*
+ * ap_main.c
+ *
+ *  Created on: Jun 19, 2025
+ *      Author: kccistc
+ */
+
+#include "ap_main.h"
+
+int ap_main()
+{
+	uint8_t trig = 1;
+	uint8_t btn_trig = 0;
+	uint8_t btn_on = 0;
+	uint32_t btn = 1;
+    while(1)
+    {
+        btn = BTN_Read();
+		if (btn == 1 && btn_on == 1) {
+			delay(1);
+			if (btn) {
+				btn_trig ^= 1;
+			}
+		}
+
+		if(btn == 0) btn_on = 1;
+		else btn_on = 0;
+
+
+		if (btn_trig) {
+			trig = (trig << 1) | (trig >> 7);
+		}
+		else trig = (trig >> 1) | (trig << 7);
+
+		LEDBAR_Write(trig);
+		delay(100);
+		delay(100);
+    }
+    return 0;
+}
+
+void ap_init()
+{
+    LEDBAR_Init();
+    SystemClock_Init();
+    BTN_Init();
+}

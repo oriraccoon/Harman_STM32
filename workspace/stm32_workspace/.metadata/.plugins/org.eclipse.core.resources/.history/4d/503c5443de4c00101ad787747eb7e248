@@ -1,0 +1,61 @@
+/*
+ * FND.c
+ *
+ *  Created on: Jun 19, 2025
+ *      Author: kccistc
+ */
+
+#include "FND.h"
+
+#define FND0 0XC0
+#define FND1 0xF9
+#define FND2 0xA4
+#define FND3 0xB0
+#define FND4 0x99
+#define FND5 0x92
+#define FND6 0x82
+#define FND7 0xF8
+#define FND8 0x80
+#define FND9 0x90
+
+FND[8][2] = {
+		{GPIOA, 11},
+		{GPIOB, 12},
+		{GPIOB, 2},
+		{GPIOB, 1},
+		{GPIOB, 15},
+		{GPIOB, 14},
+		{GPIOB, 13},
+		{GPIOC, 4}
+};
+
+void FND_Init(Handler_FND_TypeDef *hfnd, GPIO_TypeDef *GPIOx, uint32_t pinNum)
+{
+	hfnd->GPIOx = 0;
+	hfnd->pinNum = 0;
+	GPIO_init(hfnd->GPIOx, hfnd->pinNum, OUTPUT);
+
+	hfnd->GPIOx = GPIOx;
+	hfnd->pinNum = pinNum;
+	GPIO_init(hfnd->GPIOx, hfnd->pinNum, OUTPUT);
+}
+void FND_DATA_Init()
+{
+	GPIO_init(GPIOA, 11, OUTPUT);
+	GPIO_init(GPIOB, 12, OUTPUT);
+	GPIO_init(GPIOB, 2, OUTPUT);
+	GPIO_init(GPIOB, 1, OUTPUT);
+	GPIO_init(GPIOB, 15, OUTPUT);
+	GPIO_init(GPIOB, 14, OUTPUT);
+	GPIO_init(GPIOB, 13, OUTPUT);
+	GPIO_init(GPIOC, 4, OUTPUT);
+}
+
+void FND_Write(Handler_FND_TypeDef *hfnd, uint32_t data)
+{
+	switch(data)
+	{
+		case FND0:
+		GPIO_WritePin(LedBar[i].GPIOx, LedBar[i].pinNum, PIN_RESET);
+	}
+}
